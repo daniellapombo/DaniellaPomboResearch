@@ -8,9 +8,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pan
 
-
-from TitanicDataProcessing.py import TitanicData
-
 class Perceptron:
     def __init__(self, tr_inpt, labels, epoch, Lr, si):
         self.epoch = epoch
@@ -89,9 +86,3 @@ class Perceptron:
         plt.ylabel("Number of updates")
         plt.show()
         
-def main():
-    #self, tr_inpt, labels, epoch, Lr, si
-    p = Perceptron(t1, l1, 100, 0.001, sz)
-    print("Accuracy", (p.fit(False)), "%")
-    print(p.fit(True))
-main()
