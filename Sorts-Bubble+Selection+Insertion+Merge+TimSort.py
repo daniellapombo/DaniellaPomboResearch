@@ -4,7 +4,7 @@ Created on Fri Sep 13 12:52:43 2019
 
 @author: danie
 """
-#Dont forget to create files for the functions
+
 import timeit
 import random
 
