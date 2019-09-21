@@ -52,7 +52,7 @@ class Perceptron:
                 z = self.z_input(self.tr_inpt[k])
                 prediction = self.predict(z)
                 target = self.labels[k]
-                #Is this interpretation of updating weights correct?
+                
                 error = target - prediction
                 dw = self.Lr*error*self.tr_inpt[k]
                 
@@ -60,7 +60,7 @@ class Perceptron:
                     update_num += 1
                     
                 #self.w += dw
-                self.w[1:] += dw # Is this correct?
+                self.w[1:] += dw 
                 self.w[0] += self.Lr*error
                 
                 
