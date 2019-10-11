@@ -91,11 +91,23 @@ def swap(ar, in1, in2):
     return ar
     
 #Iterate through whole list bubble by bubble (bubble size decreases each epoch)
-def bubbleSort(ar):
+def bubbleSort(ar): #Best case: O(n**2) Worst Case: O(n**2)
     for k in range(len(ar), 0, -1):
         for i in range(1,k) :
             if (ar[i]<ar[i-1]):
                 swap(ar, i-1, i) #swap neighbors that are out of order
+    return ar
+
+def faster_bubbleSort(ar): #Best case: O(n), Worst Case: O(n**2)
+    for k in range(len(ar), 0, -1):
+        #Assume list is first sorted
+        isSorted = True #Indicates is the pass (bubble) through list is sorted or not
+        for i in range(1,k) :
+            if (ar[i]<ar[i-1]):
+                swap(ar, i-1, i) #swap neighbors that are out of order
+                isSorted = False #Had to make a swap = is not sorted... NEEDs sorting
+        if isSorted: #If all were sorted w/in this pass (bubble)
+                break #Means list is sorted - no need to continue to iterate through list
     return ar
 
 def selectSort(ar):
