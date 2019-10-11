@@ -125,10 +125,6 @@ def classBinarySearch(ar, find):
                 elif ar[mid] > find: #find is in the lower half of the interval
                     #update the upper bound of the interval to mid - 1 (cuz k its not at mid)
                     high = mid - 1
-    
-        if flag == 1:#Found value find
-            print(find, "was found at index ", position)
-            return position
         
         else: #Did not find value find
             print(find, "was not found")
