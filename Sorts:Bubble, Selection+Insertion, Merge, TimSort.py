@@ -72,9 +72,9 @@ def insertionSort(ar):
         temp = ar[i]
         index = i
         while (index > 0 and ar[index-1] > ar[index]):
-            ar[index] = ar[index-1]
+            ar[index] = ar[index-1] 
             index -= 1
-            ar[index] = temp
+            ar[index] = temp #Same as ar[index], ar[index-1] = ar[index-1], ar[index]
         
     return ar
 
